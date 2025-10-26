@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(27, 29, 30);
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;  
+}
+
+/* Header */
+.header {
+  width: 100%; /* ocupa toda a largura da janela */
+  margin: 0;
+  background: rgb(24, 26, 27);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 10px 10%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #333;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.add-btn {
+  background-color: #cc4b00;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+/* Ícone Lucide dentro do botão */
+.add-btn i {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2.2; /* deixa o traço um pouco mais grosso */
+}
+
+
+/* Efeito hover */
+.add-btn:hover {
+  background-color: #e25c00;
+  transform: translateY(-2px);
+}
+
+/* Efeito ativo (clique) */
+.add-btn:active {
+  transform: translateY(0);
+}
+
+.container {
+  /* mesma largura para busca + título + grid */
+  width: clamp(700px, 40vw, 1100px); 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  background-color: rgb(24, 26, 27);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;           /* 👈 mesma largura do container */
+  margin: 0 0 1.5rem 0;  /* já está centralizada pelo container */
+  justify-content: center;
+}
+
+/* Campo de busca */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: rgb(59, 59, 59);
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.8rem 1rem; /* ⬆ mais altura interna */
+  flex: 1;
+}
+
+.search-box i {
+  margin-right: 0.6rem;
+  color: #aaa;
+  font-size: 1.1rem; /* ícone um pouco maior */
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 1rem; /* texto mais legível */
+}
+
+.container > h2,
+.results-info {
+  width: 100%;
+  text-align: center;
+}
+
+/* Caixas de seleção */
+select {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 0.8rem 1rem; /* ⬆ mais altura */
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: #666;
+}
+
+
+.results-info {
+  margin-bottom: 1.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Cards */
+.cards {
+  width: 100%;                     /* 👈 mesma largura da barra */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  justify-items: stretch;          /* cards esticam igualmente */
+}
+
+.card {
+  background-color: rgb(24, 26, 27);
+  border-radius: 12px;
+  border: 2px solid #333;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease 0s, transform 0.3s ease 0.5s; 
+}
+
+.card:hover {
+  border-color: rgb(255, 128, 0);
+  transform: translateY(-4px);
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.icons button:hover {
+  color: #fff;
+}
+
+/* ===== Footer ===== */
+
+/* container interno com 80% de largura */
+.site-footer {
+  width: 100%;
+  background: #121a36;
+  padding: 60px 0;
+  margin-top: 20px;
+  color: #e7e9f1;
+}
+
+/* container interno */
+.footer-inner {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* proporção de espaço — esquerda 3x maior */
+.footer-left {
+  flex: 3; /* 👈 ocupa 3x mais espaço */
+}
+
+.footer-right {
+  flex: 1; /* 👈 ocupa 1x de espaço */
+}
+
+/* conteúdo do lado esquerdo */
+.footer-left h3 {
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #e7e9f1;
+}
+
+.footer-left p {
+  margin: 6px 0;
+  color: #cbd2ea;
+}
+
+.footer-left .small {
+  font-size: 0.9rem;
+  color: #b8c1df;
+}
+
+/* lado direito: redes + link */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ✅ centraliza horizontalmente */
+  justify-content: center; /* ✅ centraliza verticalmente */
+  gap: 24px;
+  flex: 1;
+  text-align: center;      /* ✅ garante centralização do texto */
+}
+
+/* Ícones das redes */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(24, 26, 27);
+  display: grid;
+  place-items: center;
+  color: #e7e9f1;
+  text-decoration: none;
+  transition: transform .15s ease, background .2s ease, color .2s ease;
+}
+
+.social-btn i {
+  width: 24px;
+  height: 24px;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  background: #222a4a;
+  color: #ffd36a;
+}
+
+/* Link de termos */
+.footer-link {
+  color: #ffcc66;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+.footer-link:hover {
+  text-decoration: underline;
+  color: #ffe8a0;
+}
+
+/* ===== Responsividade para telas pequenas ===== */
+@media (max-width: 768px) {
+
+  /* Header: botão "Adicionar Perfil" desce e alinha melhor */
+  .header {
+    flex-direction: column;
+    align-items: center; /* ✅ centraliza horizontalmente */
+    text-align: center;  /* ✅ centraliza o texto */
+    gap: 12px;           /* espaço entre título e botão */
+  }
+
+  .header h1 {
+    text-align: center;  /* ✅ garante que o texto quebre centralizado */
+    line-height: 1.3;    /* melhora legibilidade em 2 linhas */
+  }
+
+
+  .add-button {
+    align-self: flex-end;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .container {
+    width: 90vw;                   /* todo o bloco encolhe junto */
+  }
+
+  /* Barra de busca e filtros empilhados verticalmente */
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input,
+  .search-bar select {
+    width: 100%;
+  }
+
+  /* Centraliza tudo */
+  main {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;    /* 1 por linha no mobile */
+  }
+    .footer-inner {
+    width: 90vw;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .footer-right {
+    align-items: center;      /* centraliza redes e link */
+    gap: 16px;
+  }
+
+  .footer-left h3 {
+    font-size: 1.25rem;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+  .social-btn i {
+    width: 24px;
+    height: 24px;
+  }
+}
+
