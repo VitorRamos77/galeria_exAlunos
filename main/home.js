@@ -1,13 +1,13 @@
 //Abrir os dados do json 
-const cards = document.querySelector('.cards');
-const curso_atual= document.querySelector('.filtro_curso');
-const ano_atual= document.querySelector('.filtro_ano');
-const nome_atual= document.querySelector('.filtro_nome');
-const num_resultados= document.querySelector('.results-info');
-let num_pessoas_mostradas = 0;
-let num_total = 0;
+const cards = document.querySelector('.cards'); //Onde ficam os cards
+const curso_atual= document.querySelector('.filtro_curso'); //Filtro de qual é o curso atual
+const ano_atual= document.querySelector('.filtro_ano'); //Filtro de qual é o ano atual
+const nome_atual= document.querySelector('.filtro_nome'); //Filtro de qual é o nome atual
+const num_resultados= document.querySelector('.results-info'); //Texto que exibe o numero de resultados mostrados e o total
+let num_pessoas_mostradas = 0; //numero atual de pessoas ostradas
+let num_total = 0; //numero total de pessoas carregadas
 
-function criarAlumniCard(pessoa) {
+function criarAlumniCard(pessoa) { //Função que gera um card de pessoa com base os dados recebidos
   const cardHTML = `
   <div class="card">
         <img src="https://via.placeholder.com/100" alt="Foto do ex-aluno" class="profile-pic" />
@@ -28,7 +28,7 @@ function criarAlumniCard(pessoa) {
   return tempDiv.firstElementChild;
 }
 
-function exibirDados(usuario) {
+function exibirDados(usuario) { //Função que exibe os dados considerando os filtros
   cards.innerHTML=``;
   num_pessoas_mostradas=0;
   for(let profile in usuario){
@@ -40,12 +40,7 @@ function exibirDados(usuario) {
   num_resultados.innerHTML=`Mostrando ${num_pessoas_mostradas} de ${num_total} ex-alunos`
 }
 
-// Espera o DOM estar pronto antes de executar o script
-document.addEventListener('DOMContentLoaded', function(){
-    buscarDados();
-});
-
-async function buscarDados() {
+async function buscarDados() { //Função que recebe os dados e mantém a exibição de acordo com os filtros
   try {
     const resposta = await fetch('dados.json');
     if (!resposta.ok) {
@@ -58,10 +53,15 @@ async function buscarDados() {
     exibirDados(dados);
     curso_atual.addEventListener('change', function() {exibirDados(dados);});
     ano_atual.addEventListener('change', function(){exibirDados(dados);});
-    nome_atual.addEventListener('keypress', function(){exibirDados(dados);});
+    nome_atual.addEventListener('keyup', function(){exibirDados(dados);});
   } catch (erro) {
     console.error('Falha ao buscar dados:', erro);
     cards.innerText = 'Falha ao carregar dados';
   }
 }
+
+// Espera o DOM estar pronto antes de executar o script
+document.addEventListener('DOMContentLoaded', function(){
+    buscarDados();
+});
 
