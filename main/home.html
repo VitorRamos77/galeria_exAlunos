@@ -1,443 +1,248 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeria de Ex-Alunos do IME</title>
-  <link rel="stylesheet" href="home_style.css" />
-  <script src="home.js" defer></script>
-</head>
-<body>
-  <!-- Header -->
-  <header class="header">
-    <h1>Galeria de Ex-Alunos do IME</h1>
-    <button class="add-btn">
-      <i data-lucide="plus"></i> Adicionar Perfil
-    </button>
-  </header>
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria de Ex-Alunos do IME</title>
+    <link rel="stylesheet" href="home_style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1>Galeria de Ex-Alunos do IME</h1>
+      <button class="add-btn">
+        <i data-lucide="plus"></i> Adicionar Perfil
+      </button>
+    </header>
 
-  <!-- Container principal -->
-  <main class="container">
+    <!-- Container principal -->
+    <main class="container">
 
-    <!-- Barra de pesquisa -->
-    <section class="search-bar">
-      <div class="search-box">
-        <i data-lucide="search"></i>
-        <input type="text" placeholder="Buscar ex-alunos por nome" class="filtro_nome"/>
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2a2b99f929294b52b998dcd956a90563f869953f
-      <select class="filtro_curso">
-        <option value="padrao">Todos os Cursos</option>
-        <option value="Engenharia de Fortificação e Construção">Engenharia de Fortificação e Construção</option>
-        <option value="Engenharia Elétrica">Engenharia Elétrica</option>
-        <option value="Engenharia Eletrônica">Engenharia Eletrônica</option>
-        <option value="Engenharia de Comunicações">Engenharia de Comunicações</option>
-        <option value="Engenharia Mecãnica e de Armamento">Engenharia Mecãnica e de Armamento</option>
-        <option value="Engenharia Mecânica e de Automóveis">Engenharia Mecânica e de Automóveis</option>
-        <option value="Engenharia Química">Engenharia Química</option>
-        <option value="Engenharia de Cartográfica">Engenharia de Cartográfica</option>
-        <option value="Engenharia de Materiais">Engenharia de Materiais</option>
-        <option value="Engenharia da Computação">Engenharia da Computação</option>
-      </select>
-      <select class="filtro_ano">
-        <option value="padrao">Todos os Anos</option>
-        <option value="2025">2025</option>
-        <option value="2024">2024</option>
-        <option value="2023">2023</option>
-        <option value="2022">2022</option>
-        <option value="2021">2021</option>
-        <option value="2020">2020</option>
-        <option value="2019">2019</option>
-        <option value="2018">2018</option>
-        <option value="2017">2017</option>
-        <option value="2016">2016</option>
-        <option value="2015">2015</option>
-        <option value="2014">2014</option>
-        <option value="2013">2013</option>
-        <option value="2012">2012</option>
-        <option value="2011">2011</option>
-        <option value="2010">2010</option>
-<<<<<<< HEAD
-=======
-      <select>
-        <option>Todos os Cursos</option>
-        <option>Engenharia de Fortificação e Construção</option>
-        <option>Engenharia Elétrica</option>
-        <option>Engenharia Eletrônica</option>
-        <option>Engenharia de Telecomunicações</option>
-        <option>Engenharia Mecânica de Armamento</option>
-        <option>Engenharia Mecânica de Automóveis</option>
-        <option>Engenharia Química</option>
-        <option>Engenharia de Cartografia</option>
-        <option>Engenharia de Materiais</option>
-        <option>Engenharia de Computação</option>
+      <!-- Barra de pesquisa -->
+      <section class="search-bar">
+        <div class="search-box">
+          <i data-lucide="search"></i>
+          <input type="text" placeholder="Buscar ex-alunos por nome" class="filtro_nome"/>
+        </div>
+        <select class="filtro_curso">
+          <option value="padrao">Todos os Cursos</option>
+          <option value="Engenharia de Fortificação e Construção">Engenharia de Fortificação e Construção</option>
+          <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+          <option value="Engenharia Eletrônica">Engenharia Eletrônica</option>
+          <option value="Engenharia de Comunicações">Engenharia de Comunicações</option>
+          <option value="Engenharia Mecânica e de Armamento">Engenharia Mecânica e de Armamento</option>
+          <option value="Engenharia Mecânica e de Automóveis">Engenharia Mecânica e de Automóveis</option>
+          <option value="Engenharia Química">Engenharia Química</option>
+          <option value="Engenharia Cartográfica">Engenharia Cartográfica</option>
+          <option value="Engenharia de Materiais">Engenharia de Materiais</option>
+          <option value="Engenharia da Computação">Engenharia da Computação</option>
         </select>
-      <select>
-        <option>Todos os Anos</option>
->>>>>>> 90b8b199cc187c762ce21ff614ea2df50ad39d04
-=======
->>>>>>> 2a2b99f929294b52b998dcd956a90563f869953f
-      </select>
-    </section>
+        <select class="filtro_ano">
+          <option value="padrao">Todos os Anos</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+        </select>
+      </section>
 
-    <!-- Info -->
-    <h2 class="results-info"></h2>
+      <!-- Info -->
+      <h2 class="results-info"></h2>
 
-    <!-- Cards -->
-    <section class="cards">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <div 
-        class="card"
-        data-nome="Nome do Ex-Aluno"
-        data-curso="Curso"
-        data-ano="XXXX"
-        data-cidade="Cidade"
-        data-empresa="Empresa"
-        data-cargo="Cargo atual"
-        data-email="email@exemplo.com"
-        data-telefone="(00) 00000-0000"
-        data-linkedin="linkedin.com/in/usuario"
-        data-bio="Breve biografia ou resumo profissional."
-        data-habilidades="Habilidade 1,Habilidade 2,Habilidade 3"
-        data-experiencia="X anos de experiência na área"
-      >
-        <img src="https://via.placeholder.com/100" alt="Foto do ex-aluno" class="profile-pic" />
-        <h3>Nome do Ex-Aluno</h3>
-        <p><i data-lucide="graduation-cap"></i> Curso</p>
-        <p><i data-lucide="calendar"></i> Turma de XXXX</p>
-        <p><i data-lucide="map-pin"></i> Cidade</p>
-        <p><i data-lucide="building"></i> Empresa</p>
-        <div class="icons">
-          <button><i data-lucide="mail"></i></button>
-          <button><i data-lucide="phone"></i></button>
-          <button><i data-lucide="linkedin"></i></button>
-        </div>
-      </div>
-      <div 
-        class="card"
-        data-nome="Nome do Ex-Aluno"
-        data-curso="Curso"
-        data-ano="XXXX"
-        data-cidade="Cidade"
-        data-empresa="Empresa"
-        data-cargo="Cargo atual"
-        data-email="email@exemplo.com"
-        data-telefone="(00) 00000-0000"
-        data-linkedin="linkedin.com/in/usuario"
-        data-bio="Breve biografia ou resumo profissional."
-        data-habilidades="Habilidade 1,Habilidade 2,Habilidade 3"
-        data-experiencia="X anos de experiência na área"
-      >
-        <img src="https://via.placeholder.com/100" alt="Foto do ex-aluno" class="profile-pic" />
-        <h3>Nome do Ex-Aluno</h3>
-        <p><i data-lucide="graduation-cap"></i> Curso</p>
-        <p><i data-lucide="calendar"></i> Turma de XXXX</p>
-        <p><i data-lucide="map-pin"></i> Cidade</p>
-        <p><i data-lucide="building"></i> Empresa</p>
-        <div class="icons">
-          <button><i data-lucide="mail"></i></button>
-          <button><i data-lucide="phone"></i></button>
-          <button><i data-lucide="linkedin"></i></button>
-        </div>
-      </div>
-      <div 
-        class="card"
-        data-nome="Nome do Ex-Aluno"
-        data-curso="Curso"
-        data-ano="XXXX"
-        data-cidade="Cidade"
-        data-empresa="Empresa"
-        data-cargo="Cargo atual"
-        data-email="email@exemplo.com"
-        data-telefone="(00) 00000-0000"
-        data-linkedin="linkedin.com/in/usuario"
-        data-bio="Breve biografia ou resumo profissional."
-        data-habilidades="Habilidade 1,Habilidade 2,Habilidade 3"
-        data-experiencia="X anos de experiência na área"
-      >
-        <img src="https://via.placeholder.com/100" alt="Foto do ex-aluno" class="profile-pic" />
-        <h3>Nome do Ex-Aluno</h3>
-        <p><i data-lucide="graduation-cap"></i> Curso</p>
-        <p><i data-lucide="calendar"></i> Turma de XXXX</p>
-        <p><i data-lucide="map-pin"></i> Cidade</p>
-        <p><i data-lucide="building"></i> Empresa</p>
-        <div class="icons">
-          <button><i data-lucide="mail"></i></button>
-          <button><i data-lucide="phone"></i></button>
-          <button><i data-lucide="linkedin"></i></button>
-        </div>
-      </div>
-      <div 
-        class="card"
-        data-nome="Nome do Ex-Aluno"
-        data-curso="Curso"
-        data-ano="XXXX"
-        data-cidade="Cidade"
-        data-empresa="Empresa"
-        data-cargo="Cargo atual"
-        data-email="email@exemplo.com"
-        data-telefone="(00) 00000-0000"
-        data-linkedin="linkedin.com/in/usuario"
-        data-bio="Breve biografia ou resumo profissional."
-        data-habilidades="Habilidade 1,Habilidade 2,Habilidade 3"
-        data-experiencia="X anos de experiência na área"
-      >
-        <img src="https://via.placeholder.com/100" alt="Foto do ex-aluno" class="profile-pic" />
-        <h3>Nome do Ex-Aluno</h3>
-        <p><i data-lucide="graduation-cap"></i> Curso</p>
-        <p><i data-lucide="calendar"></i> Turma de XXXX</p>
-        <p><i data-lucide="map-pin"></i> Cidade</p>
-        <p><i data-lucide="building"></i> Empresa</p>
-        <div class="icons">
-          <button><i data-lucide="mail"></i></button>
-          <button><i data-lucide="phone"></i></button>
-          <button><i data-lucide="linkedin"></i></button>
-        </div>
-      </div>
-      <div 
-        class="card"
-        data-nome="Nome do Ex-Aluno"
-        data-curso="Curso"
-        data-ano="XXXX"
-        data-cidade="Cidade"
-        data-empresa="Empresa"
-        data-cargo="Cargo atual"
-        data-email="email@exemplo.com"
-        data-telefone="(00) 00000-0000"
-        data-linkedin="linkedin.com/in/usuario"
-        data-bio="Breve biografia ou resumo profissional."
-        data-habilidades="Habilidade 1,Habilidade 2,Habilidade 3"
-        data-experiencia="X anos de experiência na área"
-      >
-        <img src="https://via.placeholder.com/100" alt="Foto do ex-aluno" class="profile-pic" />
-        <h3>Nome do Ex-Aluno</h3>
-        <p><i data-lucide="graduation-cap"></i> Curso</p>
-        <p><i data-lucide="calendar"></i> Turma de XXXX</p>
-        <p><i data-lucide="map-pin"></i> Cidade</p>
-        <p><i data-lucide="building"></i> Empresa</p>
-        <div class="icons">
-          <button><i data-lucide="mail"></i></button>
-          <button><i data-lucide="phone"></i></button>
-          <button><i data-lucide="linkedin"></i></button>
-        </div>
-      </div>
-      <div 
-        class="card"
-        data-nome="Nome do Ex-Aluno"
-        data-curso="Curso"
-        data-ano="XXXX"
-        data-cidade="Cidade"
-        data-empresa="Empresa"
-        data-cargo="Cargo atual"
-        data-email="email@exemplo.com"
-        data-telefone="(00) 00000-0000"
-        data-linkedin="linkedin.com/in/usuario"
-        data-bio="Breve biografia ou resumo profissional."
-        data-habilidades="Habilidade 1,Habilidade 2,Habilidade 3"
-        data-experiencia="X anos de experiência na área"
-      >
-        <img src="https://via.placeholder.com/100" alt="Foto do ex-aluno" class="profile-pic" />
-        <h3>Nome do Ex-Aluno</h3>
-        <p><i data-lucide="graduation-cap"></i> Curso</p>
-        <p><i data-lucide="calendar"></i> Turma de XXXX</p>
-        <p><i data-lucide="map-pin"></i> Cidade</p>
-        <p><i data-lucide="building"></i> Empresa</p>
-        <div class="icons">
-          <button><i data-lucide="mail"></i></button>
-          <button><i data-lucide="phone"></i></button>
-          <button><i data-lucide="linkedin"></i></button>
-        </div>
-      </div>
->>>>>>> 90b8b199cc187c762ce21ff614ea2df50ad39d04
-=======
->>>>>>> 2a2b99f929294b52b998dcd956a90563f869953f
-    </section>
-  </main>
+      <!-- Cards -->
+      <section class="cards"></section>
+    </main>
 
-  <!-- adicionar perfil -->
+    <!-- adicionar perfil -->
 
-  <div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Adicionar Seu Perfil</h2>
+    <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Adicionar Seu Perfil</h2>
 
-    <form>
-      <!-- Foto de perfil -->
-      <div class="photo-upload">
-        <div class="photo-placeholder">
-          <i class="lucide-camera"></i>
-        </div>
-        <div class="photo-actions">
-          <button type="button" class="choose-photo">
-            <i class="lucide-image"></i> Escolher Foto
-          </button>
-          <p>JPG, PNG até 5MB</p>
-        </div>
-      </div>
-
-      <!-- Grid principal -->
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="name">Nome Completo *</label>
-          <input type="text" id="name" placeholder="Digite seu nome completo" required>
+      <form>
+        <!-- Foto de perfil -->
+        <div class="photo-upload">
+          <div class="photo-placeholder">
+            <i class="lucide-camera"></i>
+          </div>
+          <div class="photo-actions">
+            <button type="button" class="choose-photo">
+              <i class="lucide-image"></i> Escolher Foto
+            </button>
+            <p>JPG, PNG até 5MB</p>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="course">Curso *</label>
-            <select id="course" required>
-              <option value="" disabled selected>Selecione um curso</option>
-              <option>Engenharia de Fortificação e Construção</option>
-              <option>Engenharia Elétrica</option>
-              <option>Engenharia Eletrônica</option>
-              <option>Engenharia de Telecomunicações</option>
-              <option>Engenharia Mecânica de Armamento</option>
-              <option>Engenharia Mecânica de Automóveis</option>
-              <option>Engenharia Química</option>
-              <option>Engenharia de Cartografia</option>
-              <option>Engenharia de Materiais</option>
-              <option>Engenharia de Computação</option>
-            </select>
+        <!-- Grid principal -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Nome Completo *</label>
+            <input type="text" id="name" placeholder="Digite seu nome completo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="course">Curso *</label>
+              <select id="course" required>
+                <option value="" disabled selected>Selecione um curso</option>
+                <option value="Engenharia de Fortificação e Construção">Engenharia de Fortificação e Construção</option>
+                <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+                <option value="Engenharia Eletrônica">Engenharia Eletrônica</option>
+                <option value="Engenharia de Comunicações">Engenharia de Comunicações</option>
+                <option value="Engenharia Mecânica e de Armamento">Engenharia Mecânica e de Armamento</option>
+                <option value="Engenharia Mecânica e de Automóveis">Engenharia Mecânica e de Automóveis</option>
+                <option value="Engenharia Química">Engenharia Química</option>
+                <option value="Engenharia Cartográfica">Engenharia Cartográfica</option>
+                <option value="Engenharia de Materiais">Engenharia de Materiais</option>
+                <option value="Engenharia da Computação">Engenharia da Computação</option>
+              </select>
+          </div>
+
+          <div class="form-group">
+            <label for="year">Ano de Formatura *</label>
+            <input type="text" id="year" placeholder="ex: 2024" required>
+          </div>
+
+          <div class="form-group">
+            <label for="city">Cidade *</label>
+            <input type="text" id="city" placeholder="ex: São Paulo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Empresa</label>
+            <input type="text" id="company" placeholder="Sua empresa atual">
+          </div>
+
+          <div class="form-group">
+            <label for="role">Cargo</label>
+            <input type="text" id="role" placeholder="Seu cargo atual">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="seu.email@exemplo.com">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="text" id="phone" placeholder="(11) 99999-9999">
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="year">Ano de Formatura *</label>
-          <input type="text" id="year" placeholder="ex: 2024" required>
+        <div class="form-group full-width">
+          <label for="linkedin">Link do Perfil do LinkedIn</label>
+          <input type="text" id="linkedin" placeholder="seu-nome-de-usuario-linkedin">
         </div>
 
-        <div class="form-group">
-          <label for="city">Cidade *</label>
-          <input type="text" id="city" placeholder="ex: São Paulo" required>
+        <div class="form-group full-width">
+          <label for="bio">Biografia</label>
+          <textarea id="bio" rows="3" placeholder="Conte sobre você, sua experiência e interesses..."></textarea>
         </div>
 
-        <div class="form-group">
-          <label for="company">Empresa</label>
-          <input type="text" id="company" placeholder="Sua empresa atual">
+        <div class="form-buttons">
+          <button type="button" class="cancel-btn" id="cancel-btn">Cancelar</button>
+          <button type="submit" class="submit-btn">Adicionar Perfil</button>
         </div>
-
-        <div class="form-group">
-          <label for="role">Cargo</label>
-          <input type="text" id="role" placeholder="Seu cargo atual">
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="seu.email@exemplo.com">
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Telefone</label>
-          <input type="text" id="phone" placeholder="(11) 99999-9999">
-        </div>
-      </div>
-
-      <div class="form-group full-width">
-        <label for="linkedin">Link do Perfil do LinkedIn</label>
-        <input type="text" id="linkedin" placeholder="seu-nome-de-usuario-linkedin">
-      </div>
-
-      <div class="form-group full-width">
-        <label for="bio">Biografia</label>
-        <textarea id="bio" rows="3" placeholder="Conte sobre você, sua experiência e interesses..."></textarea>
-      </div>
-
-      <div class="form-buttons">
-        <button type="button" class="cancel-btn" id="cancel-btn">Cancelar</button>
-        <button type="submit" class="submit-btn">Adicionar Perfil</button>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
 
-<!-- Modal genérico -->
-<div id="profileModal" class="profile-modal">
-  <div class="profile-modal-content">
-    <button class="profile-close" id="closeProfile">&times;</button>
+  <div id="profileModal" class="profile-modal">
+    <div class="profile-modal-content">
+      <button class="profile-close" id="closeProfile">&times;</button>
 
-    <div class="profile-header">
-      <img src="https://via.placeholder.com/90" alt="Foto do ex-aluno" />
-      <div>
-        <h2 id="modalName">Nome do Ex-Aluno</h2>
-        <h3 id="modalHeadline">Cargo ou cargo + empresa</h3>
-      </div>
-    </div>
-
-    <div class="profile-body">
-      <!-- Coluna Esquerda -->
-      <div>
-        <div class="profile-section">
-          <h4>Informações Pessoais</h4>
-          <div class="profile-info-line"><i data-lucide="graduation-cap"></i><p id="modalCourse">Curso • Turma de XXXX</p></div>
-          <div class="profile-info-line"><i data-lucide="map-pin"></i><p id="modalCity">Cidade</p></div>
-          <div class="profile-info-line"><i data-lucide="briefcase"></i><p id="modalExperience">Experiência</p></div>
-        </div>
-
-        <div class="profile-section">
-          <h4>Sobre</h4>
-          <p id="modalBio">Biografia do ex-aluno...</p>
+      <div class="profile-header">
+        <img src="https://via.placeholder.com/90" alt="Foto do ex-aluno" />
+        <div>
+          <h2 id="modalName">Nome do Ex-Aluno</h2>
+          <h3 id="modalHeadline">Cargo ou cargo + empresa</h3>
         </div>
       </div>
 
-      <!-- Coluna Direita -->
-      <div>
-        <div class="profile-section">
-          <h4>Informações de Contato</h4>
-          <div class="profile-info-line"><i data-lucide="mail"></i><p id="modalEmail">exemplo@email.com</p></div>
-          <div class="profile-info-line"><i data-lucide="phone"></i><p id="modalPhone">(11) 99999-9999</p></div>
-          <div class="profile-info-line"><i data-lucide="linkedin"></i><p id="modalLinkedin">linkedin.com/in/exemplo</p></div>
+      <div class="profile-body">
+        <!-- Coluna Esquerda -->
+        <div>
+          <div class="profile-section">
+            <h4>Informações Pessoais</h4>
+            <div class="profile-info-line"><i data-lucide="graduation-cap"></i><p id="modalCourse">Curso • Turma de XXXX</p></div>
+            <div class="profile-info-line"><i data-lucide="map-pin"></i><p id="modalCity">Cidade</p></div>
+            <div class="profile-info-line"><i data-lucide="briefcase"></i><p id="modalExperience">Experiência</p></div>
+          </div>
+
+          <div class="profile-section">
+            <h4>Sobre</h4>
+            <p id="modalBio">Biografia do ex-aluno...</p>
+          </div>
         </div>
 
-        <div class="profile-section">
-          <h4>Informações Profissionais</h4>
-          <div class="profile-info-line"><i data-lucide="building"></i><p id="modalCompany">Empresa</p></div>
-          <div class="profile-info-line"><i data-lucide="briefcase"></i><p id="modalPosition">Cargo</p></div>
+        <!-- Coluna Direita -->
+        <div>
+          <div class="profile-section">
+            <h4>Informações de Contato</h4>
+            <div class="profile-info-line"><i data-lucide="mail"></i><p id="modalEmail">exemplo@email.com</p></div>
+            <div class="profile-info-line"><i data-lucide="phone"></i><p id="modalPhone">(11) 99999-9999</p></div>
+            <div class="profile-info-line"><i data-lucide="linkedin"></i><p id="modalLinkedin">linkedin.com/in/exemplo</p></div>
+          </div>
+
+          <div class="profile-section">
+            <h4>Informações Profissionais</h4>
+            <div class="profile-info-line"><i data-lucide="building"></i><p id="modalCompany">Empresa</p></div>
+            <div class="profile-info-line"><i data-lucide="briefcase"></i><p id="modalPosition">Cargo</p></div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Habilidades -->
-    <div class="profile-skills">
-      <h4>Habilidades</h4>
-      <div id="modalSkills">
-        <span class="skill-tag">Exemplo</span>
-        <span class="skill-tag">Outra Habilidade</span>
+      <!-- Habilidades -->
+      <div class="profile-skills">
+        <h4>Habilidades</h4>
+        <div id="modalSkills">
+          <span class="skill-tag">Exemplo</span>
+          <span class="skill-tag">Outra Habilidade</span>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
   <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <h3>Associação dos Ex-Alunos do Instituto Militar de Engenharia</h3>
-      <p>Apoiando o IME e a comunidade IMEana.</p>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <h3>Associação dos Ex-Alunos do Instituto Militar de Engenharia</h3>
+        <p>Apoiando o IME e a comunidade IMEana.</p>
 
-      <p class="small">
-        © 2024 Alumni IME. Todos os direitos reservados.<br>
-        CNPJ: 19.335.957/0001-17
-      </p>
-    </div>
-
-    <div class="footer-right">
-      <div class="footer-social">
-        <a href="#" aria-label="LinkedIn" class="social-btn"><i data-lucide="linkedin"></i></a>
-        <a href="#" aria-label="Facebook" class="social-btn"><i data-lucide="facebook"></i></a>
-        <a href="#" aria-label="YouTube"  class="social-btn"><i data-lucide="youtube"></i></a>
-        <a href="#" aria-label="Instagram" class="social-btn"><i data-lucide="instagram"></i></a>
+        <p class="small">
+          © 2024 Alumni IME. Todos os direitos reservados.<br>
+          CNPJ: 19.335.957/0001-17
+        </p>
       </div>
 
-      <a href="#" class="footer-link">Termos de Uso e Política de Privacidade</a>
-    </div>
-  </div>
-</footer>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn" class="social-btn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="Facebook" class="social-btn"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="YouTube"  class="social-btn"><i data-lucide="youtube"></i></a>
+          <a href="#" aria-label="Instagram" class="social-btn"><i data-lucide="instagram"></i></a>
+        </div>
 
-  <!-- Lucide icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="home_script.js"></script>
-</body>
-</html>
+        <a href="#" class="footer-link">Termos de Uso e Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="home_script.js"></script>
+  </body>
+  </html>
