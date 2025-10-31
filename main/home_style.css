@@ -1,3 +1,6 @@
+/* =========================================
+   Reset Global e Configurações Base
+   ========================================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,39 +8,30 @@
   font-family: "Inter", sans-serif;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 body {
   background-color: rgb(73, 85, 163);
   color: black;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  padding: 0;
-  min-height: 100vh;
-  overflow-x: hidden;  
+  min-height: 100vh; /* Garante que o footer fique no fim */
+  overflow-x: hidden;
 }
 
-/* Header */
+/* =========================================
+   Header
+   ========================================= */
 .header {
-  width: 100%; /* ocupa toda a largura da janela */
-  margin: 0;
+  width: 100%;
   background: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
   padding: 10px 10%;
-  box-sizing: border-box;
   border-bottom: 1px solid #333;
 }
 
 .header h1 {
-  margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -57,41 +51,33 @@ body {
   transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
-/* Ícone Lucide dentro do botão */
 .add-btn i {
   width: 22px;
   height: 22px;
-  stroke-width: 2.2; /* deixa o traço um pouco mais grosso */
+  stroke-width: 2.2;
 }
 
-
-/* Efeito hover */
 .add-btn:hover {
   background-color: #e25c00;
   transform: translateY(-2px);
 }
 
-/* Efeito ativo (clique) */
 .add-btn:active {
   transform: translateY(0);
 }
 
+/* =========================================
+   Container Principal e Filtros
+   ========================================= */
 .container {
-  /* mesma largura para busca + título + grid */
-  width: clamp(700px, 40vw, 1100px); 
+  /* Wrapper centralizado com largura fluida e limites min/max */
+  width: clamp(700px, 40vw, 1100px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.container,
-.cards {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Barra de pesquisa */
 .search-bar {
   background-color: rgb(255, 255, 255);
   border: 1px solid #333;
@@ -100,33 +86,28 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 100%;           /* 👈 mesma largura do container */
-  margin: 0 0 1.5rem 0;  /* já está centralizada pelo container */
+  width: 100%;
+  margin: 0 0 1.5rem 0;
   justify-content: center;
 }
 
-/* Campo de busca */
 .search-box {
   display: flex;
   align-items: center;
   background-color: rgb(255, 255, 255);
   border: 1px solid #444;
   border-radius: 8px;
-  padding: 0.8rem 1rem; /* ⬆ mais altura interna */
-  flex: 1;
-}
-.search-box input{
-  height: 60%; /* define altura idêntica */
-  line-height: 42px;
-  padding: 0 12px;
-  border-radius: 8px;
-  box-sizing: border-box;
+  padding: 0.8rem 1rem;
+  max-height: 6.7vh; /*Não é o ideal, mas ta funcionando*/
+  flex: 1; /* Ocupa o espaço restante */
 }
 
+/* Estilo do ícone de busca (SVG) */
 .search-box i {
   margin-right: 0.6rem;
   color: black;
-  font-size: 1.1rem; /* ícone um pouco maior */
+  width: 18px;
+  height: 18px;
 }
 
 .search-box input {
@@ -135,7 +116,7 @@ body {
   outline: none;
   color: black;
   width: 100%;
-  font-size: 1rem; /* texto mais legível */
+  font-size: 1rem;
 }
 
 .container > h2,
@@ -144,13 +125,12 @@ body {
   text-align: center;
 }
 
-/* Caixas de seleção */
 .search-bar select {
   background-color: rgb(255, 255, 255);
   border: 1px solid #444;
   color: black;
   max-width: 30%;
-  padding: 0.8rem 1rem; /* ⬆ mais altura */
+  padding: 0.8rem 1rem;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
@@ -160,7 +140,6 @@ select:hover {
   border-color: #666;
 }
 
-
 .results-info {
   margin-bottom: 1.5rem;
   color: #ccc;
@@ -168,13 +147,16 @@ select:hover {
   text-align: center;
 }
 
-/* Cards */
+/* =========================================
+   Grid de Cards
+   ========================================= */
 .cards {
-  width: 100%;                     /* 👈 mesma largura da barra */
+  width: 100%;
   display: grid;
+  /* Layout responsivo de 3 colunas */
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
-  justify-items: stretch;          /* cards esticam igualmente */
+  justify-items: stretch;
 }
 
 .card {
@@ -184,7 +166,7 @@ select:hover {
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: border-color 0.3s ease 0s, transform 0.3s ease 0.5s; 
+  transition: border-color 0.3s ease 0s, transform 0.3s ease 0.5s;
 }
 
 .card:hover {
@@ -205,6 +187,7 @@ select:hover {
   font-weight: 600;
 }
 
+/* Alinha ícones de info (graduação, etc.) ao lado do texto */
 .card p {
   font-size: 0.9rem;
   color: #424242;
@@ -213,6 +196,14 @@ select:hover {
   align-items: center;
   justify-content: center;
   gap: 6px;
+}
+
+/* Define tamanho explícito para ícones Lucide (SVG) */
+.card p i[data-lucide] {
+  width: 16px;
+  height: 16px;
+  color: #777;
+  flex-shrink: 0; /* Impede que o ícone achate */
 }
 
 .icons {
@@ -228,20 +219,65 @@ select:hover {
   border: none;
   color: #424242;
   cursor: pointer;
-  font-size: 1.2rem;
   transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons button i[data-lucide] {
+  width: 20px;
+  height: 20px;
 }
 
 .icons button:hover {
   color: #000000;
 }
 
-/* ===== Modal ===== */
+/* Estilo para quando a busca não retorna resultados */
+.cards.error-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+  max-height: 200px;
+  grid-template-columns: 1fr; /* Sobrescreve o grid de 3 colunas */
+  gap: 1rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #333;
+  border-radius: 12px;
+  min-height: 150px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cards.error-state i {
+  width: 48px;
+  height: 48px;
+  color: #cc4b00; /* Cor laranja do tema */
+  stroke-width: 1.5;
+}
+
+.cards.error-state p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  display: block; /* Garante que não seja flex */
+}
+
+/* =========================================
+   Modal: Adicionar Perfil
+   ========================================= */
 .modal {
-  display: none;
+  display: none; /* Controlado por JS */
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
@@ -278,7 +314,6 @@ select:hover {
   color: #111;
 }
 
-/* ===== Foto de perfil ===== */
 .photo-upload {
   display: flex;
   align-items: center;
@@ -317,7 +352,7 @@ select:hover {
   margin-top: 4px;
 }
 
-/* ===== Form grid ===== */
+/* Layout do formulário em 2 colunas */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -329,30 +364,33 @@ select:hover {
   flex-direction: column;
   gap: 4px;
   margin-bottom: 0.8rem;
-  select {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    background-color: #fff;
-    color: #333;
-    appearance: none; /* remove estilo padrão do navegador */
-    cursor: pointer;
-  }
 }
 
+/* CORREÇÃO: Seletor aninhado movido para CSS padrão */
+.form-group select {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: #333;
+  appearance: none; /* Remove seta padrão do dropdown */
+  cursor: pointer;
+}
+
+/* Modificador para campos que ocupam a largura total */
 .form-group.full-width {
-  grid-column: span 2;  
+  grid-column: span 2;
   margin-bottom: 1.2rem;
 }
-
 
 label {
   font-weight: 600;
   font-size: 0.95rem;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -363,7 +401,6 @@ textarea {
   resize: vertical;
 }
 
-/* ===== Botões ===== */
 .form-buttons {
   display: flex;
   justify-content: flex-end;
@@ -396,22 +433,30 @@ textarea {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* ===== Modal de Ex-Aluno ===== */
-/* === Modal de Detalhes do Ex-Aluno === */
+/* =========================================
+   Modal: Ver Perfil
+   ========================================= */
 .profile-modal {
   display: none;
   position: fixed;
-  inset: 0;
+  inset: 0; /* Atalho para top/right/bottom/left = 0 */
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
+/* Classe 'show' é adicionada/removida via JS para exibir o modal */
 .profile-modal.show {
   display: flex;
 }
@@ -428,7 +473,6 @@ textarea {
   max-height: 90vh;
 }
 
-/* Botão de Fechar */
 .profile-close {
   position: absolute;
   top: 1rem;
@@ -443,7 +487,6 @@ textarea {
   color: #000;
 }
 
-/* Cabeçalho */
 .profile-header {
   display: flex;
   align-items: center;
@@ -470,7 +513,6 @@ textarea {
   font-weight: 600;
 }
 
-/* Conteúdo dividido em 2 colunas */
 .profile-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -478,7 +520,6 @@ textarea {
   margin-bottom: 2rem;
 }
 
-/* Seções */
 .profile-section {
   margin-bottom: 1rem;
 }
@@ -496,7 +537,6 @@ textarea {
   line-height: 1.5;
 }
 
-/* Ícones e texto alinhados */
 .profile-info-line {
   display: flex;
   align-items: center;
@@ -504,12 +544,13 @@ textarea {
   margin-bottom: 0.5rem;
 }
 
+/* Ajuste do ícone SVG */
 .profile-info-line i {
   color: #00122e;
-  font-size: 1rem;
+  width: 16px;
+  height: 16px;
 }
 
-/* Seção inferior — habilidades */
 .profile-skills {
   margin-top: 1.5rem;
 }
@@ -530,18 +571,17 @@ textarea {
   font-weight: 500;
 }
 
-/* ===== Footer ===== */
-
-/* container interno com 80% de largura */
+/* =========================================
+   Footer
+   ========================================= */
 .site-footer {
   width: 100%;
   background: #121a36;
   padding: 60px 0;
   margin-top: 20px;
-  color: #e7e9f1; 
+  color: #e7e9f1;
 }
 
-/* container interno */
 .footer-inner {
   width: 80%;
   margin: 0 auto;
@@ -551,16 +591,20 @@ textarea {
   gap: 60px;
 }
 
-/* proporção de espaço — esquerda 3x maior */
 .footer-left {
-  flex: 3; /* 👈 ocupa 3x mais espaço */
+  flex: 3; /* Ocupa 3/4 do espaço */
 }
 
 .footer-right {
-  flex: 1; /* 👈 ocupa 1x de espaço */
+  flex: 1; /* Ocupa 1/4 do espaço */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
 }
 
-/* conteúdo do lado esquerdo */
 .footer-left h3 {
   margin: 0 0 10px 0;
   line-height: 1.4;
@@ -578,18 +622,6 @@ textarea {
   color: #b8c1df;
 }
 
-/* lado direito: redes + link */
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;     /* ✅ centraliza horizontalmente */
-  justify-content: center; /* ✅ centraliza verticalmente */
-  gap: 24px;
-  flex: 1;
-  text-align: center;      /* ✅ garante centralização do texto */
-}
-
-/* Ícones das redes */
 .footer-social {
   display: flex;
   align-items: center;
@@ -605,7 +637,7 @@ textarea {
   place-items: center;
   color: #e7e9f1;
   text-decoration: none;
-  transition: transform .15s ease, background .2s ease, color .2s ease;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .social-btn i {
@@ -619,7 +651,6 @@ textarea {
   color: #ffd36a;
 }
 
-/* Link de termos */
 .footer-link {
   color: #ffcc66;
   text-decoration: none;
@@ -631,63 +662,52 @@ textarea {
   color: #ffe8a0;
 }
 
-body::after {
-  content: "";
-  display: block;
-  height: 0;
-}
-
-/* ===== Responsividade para telas pequenas ===== */
+/* =========================================
+   Responsividade (Telas Pequenas)
+   ========================================= */
 @media (max-width: 768px) {
-
-  /* Header: botão "Adicionar Perfil" desce e alinha melhor */
   .header {
     flex-direction: column;
-    align-items: center; /* ✅ centraliza horizontalmente */
-    text-align: center;  /* ✅ centraliza o texto */
-    gap: 12px;           /* espaço entre título e botão */
+    align-items: center;
+    text-align: center;
+    gap: 12px;
   }
 
   .header h1 {
-    text-align: center;  /* ✅ garante que o texto quebre centralizado */
-    line-height: 1.3;    /* melhora legibilidade em 2 linhas */
+    text-align: center;
+    line-height: 1.3;
   }
 
-
-  .add-button {
-    align-self: flex-end;
+  /* CORREÇÃO: Seletor .add-button renomeado para .add-btn */
+  .add-btn {
+    align-self: center; /* Alinha com o título */
     font-size: 0.9rem;
     padding: 8px 12px;
   }
 
   .container {
-    width: 90vw;                   /* todo o bloco encolhe junto */
+    width: 90vw; /* Container ocupa 90% da largura */
   }
 
-  /* Barra de busca e filtros empilhados verticalmente */
+  /* Filtros empilhados verticalmente */
   .search-bar {
     flex-direction: column;
     align-items: stretch;
-
   }
 
   .search-bar input,
   .search-bar select {
     width: 100%;
+    max-width: 100%; /* Reseta max-width do select */
   }
 
-  /* Centraliza tudo */
-  main {
-    width: 100%;
-    padding: 0 12px;
-    flex: 1;
-    background-color: rgb(24, 26, 27); /* mesma cor do body */
-  }
-
+  /* Cards empilhados (1 por linha) */
   .cards {
-    grid-template-columns: 1fr;    /* 1 por linha no mobile */
+    grid-template-columns: 1fr;
   }
-    .footer-inner {
+
+  /* Footer empilhado */
+  .footer-inner {
     width: 90vw;
     flex-direction: column;
     align-items: center;
@@ -696,7 +716,7 @@ body::after {
   }
 
   .footer-right {
-    align-items: center;      /* centraliza redes e link */
+    align-items: center;
     gap: 16px;
   }
 
@@ -712,15 +732,25 @@ body::after {
     width: 24px;
     height: 24px;
   }
+
+  /* Formulário do modal empilhado */
   .form-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Campos full-width não precisam mais do span */
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
   .form-buttons {
     flex-direction: column;
   }
   .form-buttons button {
     width: 100%;
   }
+
+  /* Modal de perfil empilhado */
   .profile-modal-content {
     width: 90%;
     padding: 1.5rem;
@@ -740,4 +770,3 @@ body::after {
     height: 80px;
   }
 }
-
